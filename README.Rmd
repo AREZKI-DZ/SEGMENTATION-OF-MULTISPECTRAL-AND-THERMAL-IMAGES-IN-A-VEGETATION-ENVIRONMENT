@@ -1,0 +1,57 @@
+---
+title: "SVM method"
+author: "RAFIK AREZKI"
+date: "16/04/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+#The segmentation of multispectral and thermal images with the SVM method
+# La segmentation des images multispectrales et thermiques avec la méthode SVM
+
+#The objective of the study
+
+    In this part, we used the SVM method for image segmentation on multi-spectral and thermal
+    images (with seven wavelengths, see the folder of images and masks in tif). The goal was 
+    to separate the leaves of trees (apple trees) from the rest in a vegetarian environment.
+    
+    You can see the training and test images in the data folder. We were able to load only
+    a small part of our dataset. The data annotation was done on the ERDAS @ IMAGE software.
+
+    I would like to thank everyone who contributed to this study
+
+    We have improved the SVM model used By [Bérengère Mathieu - published 10/31/2017]  
+    ("https://makina-corpus.com/@@search?Creator=bmt") for locating an object within an 
+    image. We adapted this model to our dataset.
+
+
+![visual segmentation diagram with SVM](/Users/rafikarezki/Desktop/svm/schema.png)
+
+#### B1...B6 are the different wavelengths.
+
+
+####The different manipulations :
+
+    we have stored part of our dataset in the data -> data train and data test or validation folder.
+
+
+
+####Training model SVM :
+   
+To train the SVM model, simply add $Train = True$ for the train_test function in the $main.py$ script.
+This script uses the $Construct\_XY$ function of the training vectors of the script $train\_SVM$. This script simply loads the masks, it preserves the most interesting superpixels, then saves them in NumPy.npy format in two vector $X$ inputs and in $Y$ output.
+
+####Prediction with SVM:
+
+For the prediction we use $pred.py$, the masks will be saved in the same files of the tif images.
+
+####Accuracy of trained model SVM:
+
+To measure the accuracy or the prediction accuracy of the trained model, we use the measurement function in the $measure\_Functions.py$ script.
+
+We used the script $train\_test\_SVM.ipynb$ to apply the different manipulations and display them on jupyter with the command "jupyter notebook".
+
+###Author: rafik AREZKI
+
+###Email: arezkirafik@gmail.com
+
