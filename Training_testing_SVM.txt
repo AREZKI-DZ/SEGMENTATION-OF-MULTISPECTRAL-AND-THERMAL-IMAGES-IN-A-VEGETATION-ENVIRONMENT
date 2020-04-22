@@ -1,19 +1,20 @@
 
-#the different steps to do for learning and testing the SVM model:
+#The different steps to do for learning and testing this SVM model:
 
 
 #PACKAGES INSTALLATION
 
 pip install -r requirements.txt
 
-#TRAIN, PREDICTION
+#TRAIN, PREDICTION STEP
 
 python main.py 
 
 ACCURACY EVALUATION
 python precision_SVM.py
  
-# To train the model and display the results online, you can use jupyter, you write the following command by putting yourself on the cloned folder:
+# To train the model and display the results online, you can use jupyter, you write the following
+command by putting yourself (With cd commande) on the cloned folder :
 
 jupyter notebook 
 
